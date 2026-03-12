@@ -27,7 +27,7 @@ console.log(x != y);  // true
 console.log(x !== y); // false
 
 /* This exercise is wrong and I dont know why*/
-
+/* Strict equality & inequality check for value and type, while loose equality transforms each side into the same type before comparing, if possible
 
 /* 4.2.3: logical operators:
 First, work out from what you understand by replacing the ? with your expected outcome; */
