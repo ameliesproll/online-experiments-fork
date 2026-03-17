@@ -28,16 +28,20 @@ for (let i = 0; i < recordedTimes.length; i++) {
  
  //Using a while loop: when the total reaction time exceeds a certain threshold (e.g., 2000 milliseconds), console.log the thisTrial. thisTrial will start from 1.
  
-// add your code below (not finished, does not work)
+// add your code below
 
 let totalTime = 0;
 let thisTrial;
 let j = 0
 
-while (totalTime < ) {
-console.log(`thisTrial: ${j}`);
-j++; 
+
+while(totalTime <= 2000){
+  totalTime += reactionTimes[j];
+  thisTrial = j + 1;
+  j += 1;  
 }
+
+
  
  console.log(`Cumulative reaction time exceeded 2000 ms at trial ${thisTrial}.`);
 
