@@ -27,11 +27,16 @@ timeline.push(instruction);
 
 // 7.2.2 make the trial_duration randomly selected from 1s, 2s or 3s
 // fixation 
+
+function getTrialDuration() {
+return Math.floor(Math.random() * 3) + 1;
+}
+
 const fixation = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "+",
     choices: "NO_KEYS",
-    trial_duration: 1000
+    trial_duration: getTrialDuration(),
 }
 timeline.push(fixation);
 
@@ -99,6 +104,15 @@ const drawBunnyfn = function (canvas){
 
 }
 
+const bunnyTrial = {
+    type: jsPsychCanvasKeyboardResponse,
+    canvas_size: [600, 600],
+    stimulus: drawBunnyfn,   
+    choices: [" "],    
+    trial_duration: 6000      
+};
+
+timeline.push(bunnyTrial)
 
 const end = {
     type: jsPsychHtmlKeyboardResponse,
