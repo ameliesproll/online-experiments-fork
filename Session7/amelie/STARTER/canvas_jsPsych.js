@@ -13,7 +13,7 @@ const jsPsych = initJsPsych();
 
 // step 3: building timeline 
 
-const timeline = [trial1, trial2, trial3];
+const timeline = [];
 
 // instruction 
 const instruction = {
@@ -109,6 +109,4 @@ const end = {
 timeline.push(end)
 
 // step 4: run the timline
-
-
-
+jsPsych.run(timeline);
