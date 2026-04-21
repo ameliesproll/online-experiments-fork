@@ -40,9 +40,16 @@
                     // TODO: 
                     // 1. clear canvas use ctx.clearRect(0, 0, canvas.width, canvas.height)
                     // 2. draw a red circle at (x, y) with given radius
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.beginPath();
+                    ctx.arc(x, y, radius, 0, Math.PI * 2);
+                    ctx.fillStyle = "red";
+                    ctx.fill();
                     
                  
                 }
+
+                drawBall();
 
 
                 function updatePosition() {
@@ -70,17 +77,22 @@
 
                     // Run for 3 seconds, then stop
                     if (elapsed < 3000) {
+                        updatePosition();
+                        applyBouncing();
+                        drawBall();
+                        animationId = requestAnimationFrame(animate);
               
 
 
                     } else {
                         // End animation
+                        cancelAnimationFrame(animationId);
                     
                     }
                 }
 
                 // Start the animation
-            
+                animationId = requestAnimationFrame(animate);
 
             }
         };
