@@ -144,6 +144,7 @@
                 return `<img src="img/angry.png" alt="angry stimulus" class="stimulus-img">`;
             }
         }
+       
 
         // These are used in the instructions screen.
         // Notice that the wording changes depending on the mode.
@@ -180,10 +181,12 @@
                 text_0_img_1 = 1;
                 setMessage("Image mode: press SPACE for the happy image, do not press for the angry image.");
                 document.getElementById("ruleBtn").textContent = "Switch to text rule";
+                document.getElementById("ruleBtn").style.color ="red";
             } else {
                 text_0_img_1 = 0;
                 setMessage("Text mode: press SPACE for GO, do not press for NO-GO.");
                 document.getElementById("ruleBtn").textContent = "Switch to image rule";
+                document.getElementById("ruleBtn").style.color = "blue";
             }
         }
 
