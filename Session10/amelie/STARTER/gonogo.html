@@ -191,6 +191,30 @@
         }
 
 
+         document.addEventListener("keydown",
+            function shortcut(event) {
+                if(event.key ==="s"){
+                changeRule();
+                }
+        });
+
+
+        document.addEventListener("keydown",
+            function myevent(event){
+                console.log(`my event type: ${event.type}`);
+                console.log(`my event target: ${event.target}`);
+                console.log(`my event key ${event.key}`);
+                console.log(`my event code ${event.code}`)
+
+                if(event.key === "r"){
+                    alert ("alert 3");
+                } else if (event.key==="e"){
+                    alert("it is not the r key")
+                }
+            }
+        )
+
+
         // This function creates one experimental trial.
         // 'type' tells us whether the current trial is a GO trial or a NO-GO trial.
         function makeTrial(type) {
